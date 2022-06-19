@@ -1,0 +1,39 @@
+{% extends './base.html' %}
+{% block pagetitle %}{{ page_title }}{% endblock %}
+{% block content %}
+<section class="bg-dark bg-gradient">
+	<div class="text-md-center py-5 text-white">
+		<h1>CONTACT</h1>
+	</div>
+</section>
+<section class="container">
+	<div class="row">
+		<div class="col-md-5">
+			<div class="py-5">
+				<h4>Address</h4>
+				<p>line 1</p>
+				<p>line 2</p>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<form class="container py-5 mb-3">
+				<div class="input-group mb-3">
+					<input type="text" class="form-control" name="fname" placeholder="Full name" aria-label="Full  name" aria-describedby="basic-addon1">
+				</div>
+				<div class="input-group mb-3">
+					
+					<input type="text" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+				</div>
+				<div class="input-group mb-3">
+				
+					<input type="text" class="form-control" name="phone" placeholder="Phone numer" aria-label="Phone number" aria-describedby="basic-addon1">
+				</div>
+				<div class="input-group">
+					<span class="input-group-text">Message</span>
+					<textarea class="form-control" name="message" aria-label="With textarea"></textarea>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>
+{% endblock %}

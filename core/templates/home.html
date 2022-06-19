@@ -1,0 +1,114 @@
+{% extends './base.html' %}
+{% block pagetitle %}{{ page_title }}{% endblock %}
+{% block content %}
+<section class="">
+	<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://img.freepik.com/free-vector/iot-technology-digital-banner-internet-things-smart-home-device-network-with-icons-futuristic-innovation-industry-vector-concept-illustration-technology-digital-electricity-internet_102902-4698.jpg?w=1380" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+</section>
+<section>
+  <div class="container row py-5 mx-auto">
+    <div class="col-md-6">
+      <h5 class="card-title placeholder-glow">
+      <span class="placeholder col-3"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-5"></span>
+      <span class="placeholder col-2"></span>
+      <span class="placeholder col-7"></span>
+      <span class="placeholder col-6"></span>
+      <span class="placeholder col-7"></span>
+    </h5>
+    </div>
+    <div class="col-md-6">
+      <p class="card-text placeholder-glow">
+      <span class="placeholder col-7"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-6"></span>
+      <span class="placeholder col-8"></span>
+    </p>
+    <p class="card-text placeholder-glow">
+      <span class="placeholder col-7"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-6"></span>
+      <span class="placeholder col-8"></span>
+    </p>
+    </div>
+  </div>
+  <div class="container mx-auto">
+    <div class="text-md-center py-5">
+      <h1>OUR PRODUCTS AND SOLUTIONS</h1>
+    </div>
+    {% for service in services %}
+    <div class="row px-auto py-5">
+      <div class="col-md-6">
+        <!--<img src="media/smartdustbin_prototype.jpeg" style="height:350px;width:auto;">-->
+        <span class="placeholder col-6 h-100 bg-success"></span>
+      </div>
+      <div class="col-md-6">
+        <h5 class="card-title placeholder-glow">
+      <span class="placeholder col-6"></span>
+    </h5>
+       <p class="card-text placeholder-glow">
+      <span class="placeholder col-7"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-6"></span>
+      <span class="placeholder col-8"></span>
+    </p>
+    <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+      </div>
+    </div>
+    {% endfor %}
+
+    <!-- project2 start-->
+    <div class="row px-auto py-5">
+      <div class="col-md-6">
+        <h5 class="card-title placeholder-glow">
+      <span class="placeholder col-6"></span>
+    </h5>
+       <p class="card-text placeholder-glow">
+      <span class="placeholder col-7"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-6"></span>
+      <span class="placeholder col-8"></span>
+    </p>
+    <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+      </div>
+      <div class="col-md-6">
+        <!--<img src="media/smartdustbin_prototype.jpeg" style="height:350px;width:auto;">-->
+        <span class="placeholder col-6 h-100 bg-success"></span>
+      </div>
+    </div>
+    <!-- project2 end-->
+
+    <!-- project3 start-->
+    <div class="row px-auto py-5">
+      <div class="col-md-6">
+        <!--<img src="media/smartdustbin_prototype.jpeg" style="height:350px;width:auto;">-->
+        <span class="placeholder col-6 h-100 bg-success"></span>
+      </div>
+      <div class="col-md-6">
+        <h5 class="card-title placeholder-glow">
+      <span class="placeholder col-6"></span>
+    </h5>
+       <p class="card-text placeholder-glow">
+      <span class="placeholder col-7"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-6"></span>
+      <span class="placeholder col-8"></span>
+    </p>
+    <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+      </div>
+    </div>
+    <!-- project3 end-->
+  </div>
+</section>
+{% endblock %}
