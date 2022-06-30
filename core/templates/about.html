@@ -10,49 +10,18 @@
 	<div class="container row py-5 mx-auto">
 		<div class="col-md-6">
 			<p class="text-info">OUR MISSION</p>
-			<h5 class="placeholder-glow">
-				<span class="placeholder col-3"></span>
-				<span class="placeholder col-4"></span>
-				<span class="placeholder col-5"></span>
-				<span class="placeholder col-2"></span>
-				<span class="placeholder col-7"></span>
-				<span class="placeholder col-6"></span>
-				<span class="placeholder col-7"></span>
-			</h5>
+			<p>To become an indispensable partner to our clients by offering the finest products and solutions to their problem in the field of technology combined with localization and service excellence. To envision design and construct the most magnificent products and software and provides quality return on investment to our customers.</p>
 		</div>
 		<div class="col-md-6">
-			<p class="placeholder-glow">
-				<span class="placeholder col-7"></span>
-				<span class="placeholder col-4"></span>
-				<span class="placeholder col-4"></span>
-				<span class="placeholder col-6"></span>
-				<span class="placeholder col-8"></span>
-			</p>
-			<p class="placeholder-glow">
-				<span class="placeholder col-7"></span>
-				<span class="placeholder col-4"></span>
-				<span class="placeholder col-4"></span>
-				<span class="placeholder col-6"></span>
-				<span class="placeholder col-8"></span>
-			</p>
+			<p class="text-info">OUR VALUES</p>
+			<p>Quality, customer satisfaction, Transparency, After sales service, corporate responsibility are the pillars of our values  and form the corner stone of our approach that webring of our approach that we bring to every engagement.</p>
 		</div>
 	</div>
 	<div class="container text-md-center py-5 mx-auto">
-		<p class="text-info">WHAT WE DO</p>
+		<p class="text-info">OUR VISION</p>
 		<div class="">
-			<p class="placeholder-glow">
-				<span class="placeholder col-7"></span>
-				<span class="placeholder col-4"></span>
-				<span class="placeholder col-4"></span>
-				<span class="placeholder col-6"></span>
-				<span class="placeholder col-8"></span>
-			</p>
-			<p class="placeholder-glow">
-				<span class="placeholder col-7"></span>
-				<span class="placeholder col-4"></span>
-				<span class="placeholder col-4"></span>
-				<span class="placeholder col-6"></span>
-				<span class="placeholder col-8"></span>
+			<p>
+				To use our industry insights and domain experience to our advantage and provide innovative, high quality, superior and cost effective solutions that brings overwhelming growth to the society and the stakeholders. To becoming the leading edge to technology provider in India, South East Asia and Middle East by creating high quality products and services in order to fulfill our clients expectation and achieve measurable competitive advantage.
 			</p>
 		</div>
 	</div>
@@ -63,82 +32,19 @@
 			<h4>OUR TEAM</h4>
 		</div>
 		<div class="row row-cols-1 row-cols-md-3 g-4">
+			{% for member in team %}
 			<div class="col">
 				<div class="card border-0" aria-hidden="true">
 					<span class="placeholder bg-danger col-12 py-5"></span>
 					<!--<img src="..." class="card-img-top" alt="..."-->
 					<div class="card-body">
-						<h5 class="card-title placeholder-glow">
-							<span class="placeholder col-6"></span>
-						</h5>
-						<p class="card-text placeholder-glow">
-							<span class="placeholder col-7"></span>
-							<span class="placeholder col-4"></span>
-							<span class="placeholder col-4"></span>
-							<span class="placeholder col-6"></span>
-							<span class="placeholder col-8"></span>
-						</p>
+						<h5 class="card-title">{{ member.name }}</h5>
+						<p>{{ member.role }}</p>
 						<a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
 					</div>
 				</div>
 			</div>
-			<div class="col">
-				<div class="card border-0" aria-hidden="true">
-					<span class="placeholder bg-danger col-12 py-5"></span>
-					<!--<img src="..." class="card-img-top" alt="..."-->
-					<div class="card-body">
-						<h5 class="card-title placeholder-glow">
-							<span class="placeholder col-6"></span>
-						</h5>
-						<p class="card-text placeholder-glow">
-							<span class="placeholder col-7"></span>
-							<span class="placeholder col-4"></span>
-							<span class="placeholder col-4"></span>
-							<span class="placeholder col-6"></span>
-							<span class="placeholder col-8"></span>
-						</p>
-						<a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
-					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="card border-0" aria-hidden="true">
-					<span class="placeholder bg-danger col-12 py-5"></span>
-					<!--<img src="..." class="card-img-top" alt="..."-->
-					<div class="card-body">
-						<h5 class="card-title placeholder-glow">
-							<span class="placeholder col-6"></span>
-						</h5>
-						<p class="card-text placeholder-glow">
-							<span class="placeholder col-7"></span>
-							<span class="placeholder col-4"></span>
-							<span class="placeholder col-4"></span>
-							<span class="placeholder col-6"></span>
-							<span class="placeholder col-8"></span>
-						</p>
-						<a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
-					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="card border-0 rounded-0" aria-hidden="true">
-					<span class="placeholder bg-danger col-12 py-5"></span>
-					<!--<img src="..." class="card-img-top" alt="..."-->
-					<div class="card-body">
-						<h5 class="card-title placeholder-glow">
-							<span class="placeholder col-6"></span>
-						</h5>
-						<p class="card-text placeholder-glow">
-							<span class="placeholder col-7"></span>
-							<span class="placeholder col-4"></span>
-							<span class="placeholder col-4"></span>
-							<span class="placeholder col-6"></span>
-							<span class="placeholder col-8"></span>
-						</p>
-						<a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
-					</div>
-				</div>
-			</div>
+			{% endfor %}
 		</div>
 	</div>
 </section>
