@@ -3,35 +3,44 @@
 {% block content %}
 <section class="bg-dark bg-gradient">
 	<div class="text-md-center py-5 text-white">
-		<h1>CONTACT</h1>
+		<h1>GET IN TOUCH</h1>
 	</div>
 </section>
 <section class="container">
 	<div class="row">
 		<div class="col-md-5">
 			<div class="py-5">
-				<h4>Address</h4>
-				<p>line 1</p>
-				<p>line 2</p>
+				<h5>Office Address</h5>
+				<p>Jamia Nagar, New Delhi, Delhi 110025</p>
+			</div>
+			<div class="py-5">
+				<h5>Enquiries</h5>
+				<div class="mt-2">
+				<a href="mailto:dexteronix@outlook.com">dexteronix@outlook.com</a></br>
+			    <a href="tel:+917277514262">+91 7277514262</a></br>
+				<a href="tel:+918750522729">+91 8750522729</a></br>
+				</div>
 			</div>
 		</div>
 		<div class="col-md-6">
-			<form class="container py-5 mb-3">
+			<form class="container py-5 mb-3" action="{% url 'contact' %}" method="post">
+				{% csrf_token %}
 				<div class="input-group mb-3">
-					<input type="text" class="form-control" name="fname" placeholder="Full name" aria-label="Full  name" aria-describedby="basic-addon1">
+					<input type="text" class="form-control rounded-0" name="name" placeholder="Full name" aria-label="Full  name" aria-describedby="basic-addon1">
 				</div>
 				<div class="input-group mb-3">
 					
-					<input type="text" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+					<input type="text" class="form-control rounded-0" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
 				</div>
 				<div class="input-group mb-3">
 				
-					<input type="text" class="form-control" name="phone" placeholder="Phone numer" aria-label="Phone number" aria-describedby="basic-addon1">
+					<input type="text" class="form-control rounded-0" name="phone" placeholder="Phone numer" aria-label="Phone number" aria-describedby="basic-addon1">
 				</div>
 				<div class="input-group">
-					<span class="input-group-text">Message</span>
-					<textarea class="form-control" name="message" aria-label="With textarea"></textarea>
+					<span class="input-group-text rounded-0">Message</span>
+					<textarea class="form-control rounded-0" name="message" aria-label="With textarea"></textarea>
 				</div>
+				<input class="btn btn-primary rounded-0 my-3" type="submit" name="submit">
 			</form>
 		</div>
 	</div>

@@ -1,5 +1,6 @@
-from django.shortcuts import render
-from .models import Service,Team
+from django.shortcuts import render,redirect
+from django.contrib import messages
+from .models import Service,Team,Message
 
 # Create your views here.
 def home(request):
@@ -25,7 +26,17 @@ def project(request):
 	return render(request,'project.html',context)
 
 def contact(request):
-	context = {
-	'page_title':'contact | Dexteronix Technologies Pvt Ltd',
-	}
+	if request.method == "POST":
+		name = request.POST.get('name')
+		email = request.POST.get('email')
+		phone = request.POST.get('phone')
+		message = request.POST.get('message')
+		new_message = Message.objects.create(name=name,email=email,message=message)
+		if phone:
+			new_message.phone = phone
+		new_message.save()
+		messages.success(request, 'Thanks for writing to us!')
+		return redirect('contact')
+
+	context = {'page_title':'contact | Dexteronix Technologies Pvt Ltd',}
 	return render(request,'contact.html',context)

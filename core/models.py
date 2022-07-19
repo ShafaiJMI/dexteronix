@@ -19,3 +19,13 @@ class Team(models.Model):
 
 	def __str__(self):
 		return str(self.name + self.role)
+
+class Message(models.Model):
+	name = models.CharField(max_length=50)
+	email = models.CharField(max_length=70)
+	phone = models.CharField(max_length=20,null=True,blank=True)
+	message = models.TextField(max_length=300)
+	sent_at = models.DateField(auto_now_add=True)
+
+	def __str__(self):
+		return self.message
